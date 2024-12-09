@@ -19,7 +19,7 @@ jobs:
       - run: zip lambda-function.zip *.py *.html
 
       # Initialize OpenTofu and deploy the stack.
-      - uses: hashicorp/setup-terraform
+      - uses: hashicorp/setup-terraform@v3.1.2
       - run: terraform init
       - run: terraform validate -no-color
       - id: plan
